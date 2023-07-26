@@ -1,0 +1,60 @@
+version: '3.1'
+
+rules:
+- rule: Greet with menu
+  steps: 
+  - intent: start
+  - action: utter_greet
+  - action: utter_menu
+
+- rule: Show menu options
+  steps:
+  - intent: menu
+  - action: utter_menu
+
+- rule: Order path
+  steps:
+  - intent: myorders
+  - action: action_redirect_to_orderPage
+
+- rule: FAQ path
+  steps:
+  - intent: faq
+  - action: action_redirect_to_FAQ
+
+- rule: Reward path
+  steps:
+  - intent: rewards
+  - action: action_redirect_to_Reward
+
+- rule: not to follow
+  steps:
+  - intent: out_of_scope
+  - action: utter_default
+
+- rule: suggest menu
+  steps:
+  - intent: greet
+  - action: utter_menu
+
+
+- rule: any help
+  steps:
+  - intent: thankyou
+  - action: utter_anything_else
+
+- rule: not related talks
+  steps:
+  - intent: out_of_scope
+  - action: utter_default
+
+
+   
+
+
+
+
+
+
+
+

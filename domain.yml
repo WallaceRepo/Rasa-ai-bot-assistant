@@ -1,0 +1,94 @@
+version: '3.1'
+
+intents:
+- start
+- myorders
+
+- faq
+- rewards
+- myshop
+- menu
+- greet
+- goodbye
+- inform
+- affirm
+- stop
+- deny
+- email
+- out_of_scope
+- thankyou
+
+entities:
+- email
+
+# forms:
+#   simple_shop_form:
+#     ignored_intents: []
+#     required_slots:
+#     - email
+
+slots:
+  email:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: email
+
+
+responses:
+  utter_greet:
+  - text: Hi. I'm Tina, your Gaze's automated assistant. 
+
+  utter_menu:
+  - text: "Here's what I can help you with. Type 'menu' if you need to start over."
+    buttons:
+    - title: "My Orders"
+      payload: "/myorders"
+    - title: "My Shop"
+      payload: "/myshop" 
+    - title: "Rewards"
+      payload: "/rewards"
+    - title: "FAQ"
+      payload: "/faq"
+
+  utter_anything_else:
+  - text: May I help you with anything else?
+  
+  utter_default:
+  - text: Sorry, I am not following.
+  
+  utter_thank_you:
+  - text: Thank you for your time.
+
+  utter_ask_email:
+  - text: Could you please enter your email address for your shop?
+ 
+actions:
+- action_redirect_to_orderPage
+- action_redirect_to_FAQ
+- action_redirect_to_Reward
+- action_redirect_to_userShopPage
+
+- utter_anything_else
+- utter_default
+- utter_greet
+- utter_thank_you
+- utter_menu
+- utter_ask_email
+
+# Define Rocket Chat as a channel
+
+channels:
+  rocketchat_incoming:
+    webhook_url: "http://localhost:3000/hooks/64a36f256cb4724f1000833e/qCgq9ggiK2sWLYpKE5BPsyiyMF7Mk93sm7h8mHqEoqbyrxYu"
+    session_persistence: true
+
+  rocketchat_outgoing:
+    webhook_url: ""
+    send_in_background: true
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

@@ -1,0 +1,61 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"myorders\"}}]": "action_redirect_to_orderPage",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"myorders\"}}, {\"prev_action\": {\"action_name\": \"action_redirect_to_orderPage\"}, \"user\": {\"intent\": \"myorders\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"buy_pizza\"}}]": "simple_pizza_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"buy_pizza\"}}, {\"active_loop\": {\"name\": \"simple_pizza_form\"}, \"prev_action\": {\"action_name\": \"simple_pizza_form\"}, \"user\": {\"intent\": \"buy_pizza\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"time\"}}]": "action_show_time",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"time\"}}, {\"prev_action\": {\"action_name\": \"action_show_time\"}, \"user\": {\"intent\": \"time\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"simple_pizza_form\"}}]": "utter_submit",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"simple_pizza_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_submit\"}}]": "utter_pizza_slots",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"simple_pizza_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_submit\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_pizza_slots\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"buy_fancy_pizza\"}}]": "fancy_pizza_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"buy_fancy_pizza\"}}, {\"active_loop\": {\"name\": \"fancy_pizza_form\"}, \"prev_action\": {\"action_name\": \"fancy_pizza_form\"}, \"user\": {\"intent\": \"buy_fancy_pizza\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"fancy_pizza_form\"}}]": "utter_submit",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"fancy_pizza_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_submit\"}}]": "utter_pizza_slots",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"fancy_pizza_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_submit\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_pizza_slots\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"simple_pizza_form\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"active_loop\": {\"name\": \"simple_pizza_form\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"active_loop\": {\"name\": \"simple_pizza_form\"}, \"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "simple_pizza_form",
+      "[{\"active_loop\": {\"name\": \"simple_pizza_form\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"active_loop\": {\"name\": \"simple_pizza_form\"}, \"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"active_loop\": {\"name\": \"simple_pizza_form\"}, \"prev_action\": {\"action_name\": \"simple_pizza_form\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"order_checking_form\"}}]": "action_open_orderPage",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"order_checking_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_open_orderPage\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"menu\"}}]": "utter_menu",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"menu\"}}, {\"prev_action\": {\"action_name\": \"utter_menu\"}, \"user\": {\"intent\": \"menu\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "fancy_pizza_form",
+      "order_checking_form",
+      "simple_pizza_form"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"simple_pizza_form\"}, \"prev_action\": {\"action_name\": \"simple_pizza_form\"}, \"user\": {\"intent\": \"buy_pizza\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"fancy_pizza_form\"}, \"prev_action\": {\"action_name\": \"fancy_pizza_form\"}, \"user\": {\"intent\": \"buy_fancy_pizza\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"utter_iamabot\"}}, {\"active_loop\": {\"name\": \"simple_pizza_form\"}, \"prev_action\": {\"action_name\": \"simple_pizza_form\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"menu\"}}, {\"prev_action\": {\"action_name\": \"utter_menu\"}, \"user\": {\"intent\": \"menu\"}}]",
+      "predicting default action with intent back",
+      "[{\"active_loop\": {\"name\": \"simple_pizza_form\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "handling active loops and forms - order_checking_form - action_listen",
+      "handling active loops and forms - simple_pizza_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent session_start",
+      "handling active loops and forms - order_checking_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"time\"}}]",
+      "handling active loops and forms - simple_pizza_form - action_listen",
+      "handling active loops and forms - fancy_pizza_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"menu\"}}]",
+      "handling active loops and forms - fancy_pizza_form - action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"time\"}}, {\"prev_action\": {\"action_name\": \"action_show_time\"}, \"user\": {\"intent\": \"time\"}}]",
+      "[{\"active_loop\": {\"name\": \"simple_pizza_form\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"active_loop\": {\"name\": \"simple_pizza_form\"}, \"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent restart"
+    ]
+  }
+}

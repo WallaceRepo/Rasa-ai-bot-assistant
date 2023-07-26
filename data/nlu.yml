@@ -1,0 +1,179 @@
+version: '3.1'
+
+nlu:
+- intent: start
+  examples: | 
+    - start conversation
+    - hifromfront
+    - start
+
+- intent: menu
+  examples: | 
+    - menu
+    - go to options
+    - what can you do?
+    - are you a bot?
+    - i need a help
+
+- intent: myorders
+  examples: | 
+    - myorders
+    - my orders
+    - my order
+    - What is the status of my order?
+    - Can you check my order status?
+    - Where is my order?
+    - I want to know the status of my purchase
+    - order
+    - I want to cancel my order
+    - Cancel my purchase
+    - Please cancel my order
+    - Stop my order
+    - How can I track my order?
+    - Where can I track my purchase?
+    - Track my order
+    - Is there a way to track my order?
+    - Did my order go through?
+    - Can you confirm my order?
+    - I need a confirmation for my purchase
+    - Did my purchase get confirmed?
+    - How can I return my order?
+    - What is the return policy?
+    - Can I request a refund for my purchase?
+    - I want to return my order
+    - I want to change my order
+    - Can I modify my purchase?
+    - Change my order details
+    - I need to make changes to my order
+
+- intent: faq
+  examples: |
+    - what is faq?
+    - What payment methods do you accept?
+    - Can I pay with a credit card?
+    - Do you support PayPal payments?
+    - Are there any additional fees for certain payment methods?
+    - What is your return policy?
+    - How can I return a product?
+    - Is there a deadline for returns?
+    - Can I get a refund for a returned item?
+    - How long does delivery take?
+    - What is the estimated delivery time?
+    - Can I track my delivery?
+    - Do you offer express shipping?
+
+- intent: thankyou
+  examples: |
+    - thank you
+    - thanks
+    - thank you so much
+    - thanks a lot
+    - I appreciate it
+    - thank you for your help
+    - thnks
+- intent: rewards
+  examples: |
+    - How can I redeem my rewards?
+    - my rewards
+    - Can I use my reward points for a discount?
+    - What can I get by redeeming my rewards?
+    - How do I claim my rewards?
+    - How many reward points do I have?
+    - What is my reward balance?
+    - Can you check my rewards?
+    - Tell me my reward point status
+    - How do I earn reward points?
+    - What are reward points?
+    - Can you explain the reward program?
+    - How can I redeem my reward points?
+- intent: myshop
+  examples: | 
+    - myshop
+    - shop
+    - online store
+    - my store
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+    - hello world
+    - hi there
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thanks, goodbye
+    - bye now
+    - thanks, bye!
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - /affirm
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: stop
+  examples: |
+    - stop
+    - nevermind
+    - please stop
+    - i want to stop
+    - stop the form
+    - never mind
+- intent: inform
+  examples: |
+    - My email is [example@example.com](email)
+    - I can be reached at [email@example.com](email)
+    - Email: [user@example.com](email)
+    - You can find me with the email [example@email.com](email)
+    - [user@example.com](email) is my email address
+    - My email: [example@example.com](email)
+    - I have an email: [user@example.com](email)
+
+- intent: email
+  examples: |
+    - [example@example.com](email)
+    - [email@example.com](email)
+    - [user@example.com](email)
+ 
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?

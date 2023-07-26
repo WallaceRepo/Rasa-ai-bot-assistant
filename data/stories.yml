@@ -1,0 +1,49 @@
+version: '3.1'
+
+stories:
+- story: start conversation sad path
+  steps:
+  - intent: start
+  - action: utter_greet
+  - action: utter_menu
+  - intent: stop
+  - action: utter_anything_else
+
+- story: start conversation happy path
+  steps:
+  - intent: start
+  - action: utter_greet
+  - action: utter_menu
+  - intent: myorders
+  - action: action_redirect_to_orderPage
+
+  
+- story: my_shop_story_2
+  steps:
+  - intent: myshop
+  - action: utter_ask_email
+  - intent: email
+    entities:
+    - email: xyz@gmail.com
+  - action: action_redirect_to_userShopPage
+  - slot_was_set:
+    - email: null
+  - active_loop: null
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_thank_you
+
+- story: my_shop_story_3
+  steps:
+  - intent: myshop
+  - action: utter_ask_email
+  - intent: inform
+    entities:
+    - email: example@gmail.com
+  - action: action_redirect_to_userShopPage
+  - slot_was_set:
+    - email: null
+  - active_loop: null
+  - action: utter_anything_else
+  - intent: goodbye
+  - action: utter_thank_you
